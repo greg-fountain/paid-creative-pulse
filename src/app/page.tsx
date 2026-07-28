@@ -121,7 +121,6 @@ const frictionData: FrictionPoint[] = [
 ];
 
 export default function Dashboard() {
-  // Set to null so ALL items start closed/collapsed by default
   const [openId, setOpenId] = useState<string | null>(null);
 
   const toggleCard = (id: string) => {
@@ -153,18 +152,7 @@ export default function Dashboard() {
       </header>
 
       <main className="max-w-6xl mx-auto space-y-8">
-        {/* Methodology Banner */}
-        <section className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-2">
-            Methodology & Transparency Notice
-          </h2>
-          <p className="text-sm text-slate-700 leading-relaxed">
-            This dashboard synthesizes qualitative practitioner feedback gathered from a curated sample of{' '}
-            <strong className="font-semibold text-slate-900">$n = 35$ verified public discussions</strong> (r/PPC media buyer forums, Meta Help Center threads, and TikTok Business documentation). Friction rankings reflect observed frequency density across analyzed media buying workflows.
-          </p>
-        </section>
-
-        {/* Audit Cards */}
+        {/* Audit Cards Section (Now First) */}
         <section className="space-y-4">
           <h2 className="text-xl font-bold text-slate-900 mb-4">
             Advertiser Pain Point Audit
@@ -295,6 +283,17 @@ export default function Dashboard() {
               </div>
             );
           })}
+        </section>
+
+        {/* Methodology Banner (Moved to Bottom) */}
+        <section className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm mt-12">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-2">
+            Methodology & Transparency Notice
+          </h2>
+          <p className="text-sm text-slate-700 leading-relaxed">
+            This dashboard synthesizes qualitative practitioner feedback gathered from a curated sample of{' '}
+            <strong className="font-semibold text-slate-900">$n = 35$ verified public discussions</strong> (r/PPC media buyer forums, Meta Help Center threads, and TikTok Business documentation). Friction rankings reflect observed frequency density across analyzed media buying workflows.
+          </p>
         </section>
       </main>
     </div>
