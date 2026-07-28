@@ -152,7 +152,7 @@ export default function Dashboard() {
       </header>
 
       <main className="max-w-6xl mx-auto space-y-8">
-        {/* Audit Cards Section (Now First) */}
+        {/* Audit Cards Section */}
         <section className="space-y-4">
           <h2 className="text-xl font-bold text-slate-900 mb-4">
             Advertiser Pain Point Audit
@@ -285,7 +285,7 @@ export default function Dashboard() {
           })}
         </section>
 
-        {/* Methodology Banner (Moved to Bottom) */}
+        {/* Methodology Banner at Bottom */}
         <section className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm mt-12">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-2">
             Methodology & Transparency Notice
